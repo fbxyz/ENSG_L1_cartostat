@@ -1,0 +1,169 @@
+a, a > code {
+  color: rgb(197, 145, 12);
+  text-decoration: none;
+}
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+    
+    .inverse {
+      background-color: #272822;
+        color: #d6d6d6;
+        text-shadow: 0 0 20px #333;
+    }
+  .inverse h1, .inverse h2, .inverse h3 {
+    color: #f3f3f3;
+  }
+  /* Two-column layout */
+    .left-column {
+      color: #777;
+        width: 20%;
+      height: 92%;
+      float: left;
+    }
+  .left-column h2:last-of-type, .left-column h3:last-child {
+    color: #000;
+  }
+  .right-column {
+    width: 75%;
+    float: right;
+    padding-top: 1em;
+  }
+  .pull-left {
+    float: left;
+    width: 47%;
+  }
+  .pull-right {
+    float: right;
+    width: 47%;
+  }
+  .pull-left3 {
+    float: left;
+    width: 65%;
+  }
+  
+  .pull-right1 {
+    float: right;
+    width: 31%;
+  }
+  
+  .pull-left1 {
+    float: left;
+    width: 31%;
+  }
+  
+  .pull-right3 {
+    float: right;
+    width: 65%;
+  }
+  
+  .pull-right ~ * {
+    clear: both;
+  }
+  img, video, iframe {
+    max-width: 100%;
+  }
+  blockquote {
+    border-left: solid 5px #4F81BD;
+    padding-left: 1em;
+  }
+  .remark-slide table {
+    margin: auto;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+  }
+  
+  .remark-slide table thead th { border-bottom: 1px solid #ddd; }
+    th, td { padding: 5px; }
+  
+  .remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #eee }
+        
+  @page { margin: 0; }
+      
+  @media print {
+        .remark-slide-scaler {
+          width: 100% !important;
+          height: 100% !important;
+          transform: scale(1) !important;
+          top: 0 !important;
+          left: 0 !important;
+        }
+      }
+      
+.soustitre {
+    vertical-align: middle;
+    text-align: center;
+    color: #e36364;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+div.my-footer-title {
+    border-top: 6px solid #dcbd66;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 22px;
+    width: 100%;
+}
+
+
+div.my-footer {
+    background-color: #01326E;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 22px;
+    width: 100%;
+}
+
+div.my-footer span {
+    font-size: 10pt;
+    color: white;
+    position: absolute;
+    left: 165px;
+    bottom: 2px;
+}
+
+.center-img {
+    margin: 0;
+    position: relative;
+    transform: translate(0%, 0%);
+    text-align: center;
+}
+
+.zoom div img {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.zoom div:hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.ken {
+	   animation: kenburns-bottom 5s ease-out both;
+}
+
+@keyframes kenburns-bottom {
+  0% {
+            transform: scale(1) translate(0, 0);
+            transform-origin: 0% 0%;
+  }
+  100% {
+            transform: scale(1.25) translate(0px, 0px);
+            transform-origin: top left;
+  }
+}
+
+.legend {
+  font-size: 50%;
+}
+
+

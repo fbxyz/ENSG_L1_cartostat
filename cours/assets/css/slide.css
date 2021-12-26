@@ -1,0 +1,55 @@
+/* Bandeau */
+div.image_bandeau {
+   content:url("./images/bandeau.png");
+}
+
+      
+slide {
+  background-color: #99d1ca !important;
+  background-size: 200px !important;
+  background-repeat: no-repeat !important;
+  background-position: 93.1% 4% !important;
+} 
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+    
+
+
+/* Taille du titre */
+.title-slide hgroup h1 {
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+
+/* https://rstudio-pubs-static.s3.amazonaws.com/27777_55697c3a476640caa0ad2099fe914ae5.html#/11µ/
+
+/* Enlève l' Auto-hyphenation des titres */
+.reveal h1, .reveal h2, .reveal h3 {
+  word-wrap: normal;
+  -moz-hyphens: none;
+}
+
+/* Taille du code */
+.small-code pre code {
+  font-size: 1em;
+}
+
+/* Footer*/
+.footer {
+    color: black; background: #E8E8E8;
+    position: fixed; top: 90%;
+    text-align:center; width:100%;
+}
+
+/* centre image */
+.midcenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+

@@ -1,0 +1,754 @@
+---
+title: "L3_Cours 1_stat"
+subtitle: "Les Statistiques"
+author: "Florian Bayer"
+date: "2021-2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: assets
+    chakra: assets/libs/remark-latest.min.js
+    css: [
+    "./assets/css/theme_flo.css",
+    "./assets/css/mtheme.css",
+    "./assets/css/fonts_mtheme.css",
+    "./assets/css/animate.css",
+    "./assets/css/tools.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+
+
+---
+```{r setup, global_options,include=FALSE}
+knitr::opts_chunk$set(
+  dpi = 200,
+  strip.white = T,
+  message=FALSE,
+  comment=NA,
+  echo=FALSE,
+  warning=FALSE,
+  eval=TRUE
+)
+```
+
+```{r include=FALSE}
+source('./assets/functions.R')
+
+# Les librairies
+requiredPackages = c(
+  'knitr',
+  'png',
+  'grid',
+  'gridExtra',
+  "ggplot2",
+  "tmap",
+  'RColorBrewer',
+  "dplyr",
+  "kableExtra",
+  'ade4',
+  'dotenv'
+)
+
+PackageFacile(requiredPackages)
+
+load_dot_env(".env")
+annee = Sys.getenv("annee")
+
+```
+
+class: center, middle, inverse, title-slide, animated, fadeIn
+# ENSG : statistiques appliquées en cartographie `r annee`
+# Rappels - les données en géographie et en statistique<br /> <br />
+### Florian Bayer
+
+<img src="./assets/css/logo_p1_col.jpg" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Objectifs du cours
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+
+Savoir caractériser et organiser les données est une étape essentielle de toute étude scientifique. Outre la méthode de représentation graphique, le type de données est très important en statistique : 
+
+les **méthodes** ne seront pas les mêmes pour **caractériser** le prénom le plus fréquemment données en 2019 ou pour déterminer l'âge moyen de la population française. 
+
+--
+
+Les objectifs de ce cours sont donc :
+
+- de réviser le **vocabulaire** portant sur les données en cartographie et en statistique
+- d'apprendre à **reconnaitre** les différents types de données et de tableaux
+
+---
+class: animated, fadeIn
+## L’information géographique
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+Le géographe a pour particularité de s’intéresser aux **lieux** auxquels sont rattachés les données.
+- Une information non localisable a donc peu d’intérêt pour le géographe
+
+Le géographe utilise donc de l’**information géographique**, c’est-à-dire localisable dans l’espace : 
+- Par des coordonnées 
+- Par une appartenance à un lieu, à un maillage	
+
+Ces appartenances ont un intérêt si elles peuvent être **caractériser** :
+- À une commune peut être associée sa population totale ou sa densité 
+
+
+---
+class: animated, fadeIn
+## Les données en cartographie
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+Les données utilisées en cartographie et statistique proviennent de multiples sources (*recensement, sondage,images satellites etc.*) et peuvent être **caractérisées** (première partie du cours) :
+
+.center-img[.pull-left[
+Données qualitatives
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("./assets/images/2-Stat/Quali.png")
+```
+]
+
+.pull-right[
+Données quantitatives
+```{r echo=FALSE, out.width="70%"}
+knitr::include_graphics("./assets/images/2-Stat/Quanti.png")
+```
+]]
+
+---
+class: animated, fadeIn
+## Les données en cartographie
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+Les données peuvent être récupérer sous forme de tableaux (*i.e. INSEE*), ou bien issues de différentes sources (livres, articles, pixels).
+
+Il est nécessaire de **restructurer** ces données, le plus souvent sous la forme d'un nouveau tableau. Les différents types de tableaux seront abordés dans la seconde partie du cours.
+
+---
+class: inverse, center, middle, animated, fadeIn  
+# 1- Les données en cartographie
+
+<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<div class="my-footer-title "></div> 
+
+---
+class: animated, fadeIn
+## Rappels de vocabulaire : statistique
+
+Avant de définir les grands types de données, il est nécessaire de rappeler le vocabulaire commun aux données
+
+**La statistique** : 
+- l'ensemble de techniques et d'outils mathématiques permettant d'analyser des données
+
+**Les statistiques** : 
+- les données textes ou chiffres (alphanumériques) décrivant une population, un ensemble
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Rappels de vocabulaire : population
+
+La **population** ou **l’ensemble** :
+- La collection (l’ensemble) des données qui vont servir à créer votre carte.
+- En géographie cet ensemble est très rarement infini
+- On parlera souvent de série statistique pour les données quantitatives
+
+___
+.center-img[
+.pull-left[
+Ensemble des unités statistiques étudiées : les pays européens
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("./assets/images/2-Stat/Europe.png")
+```
+]
+
+.pull-right[
+Mais la population peut aussi correspondre à des personnes : 
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("./assets/images/2-Stat/simpson.png")
+```
+]]
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Rappels de vocabulaire : élément
+
+L'**élément** ou l’individu
+- Un objet constitutif de l'ensemble
+___
+.center-img[
+
+.pull-left[
+La Belgique est un élément de l'ensemble des pays europééns
+```{r echo=FALSE, out.width="100%"}
+
+data(World)
+
+df.Europe <-
+  World  %>% dplyr::select("iso_a3", "name", "continent", "area", "pop_est") %>%
+  dplyr::filter(continent == 'Europe') %>%
+  slice(1:5) %>%
+  rename(
+    Nom = name,
+    Superficie = area,
+    Population = pop_est,
+    Continent = continent
+  )
+
+df.Europe$geometry <- NULL
+
+kable(df.Europe %>% dplyr::select("iso_a3", "Nom", "Continent"),
+      format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    position = "left"
+  ) %>%
+  row_spec(3:3,
+           bold = T,
+           color = "white",
+           background = "#D7261E")
+
+```
+]
+
+.pull-right[
+Flanders est un individu de l'ensemble des personnages des Simpsons
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("./assets/images/2-Stat/flanders.gif")
+```
+]]
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Rappels de vocabulaire : caractère
+
+Le **caractère**
+- Les éléments d’un ensemble sont décrits par un caractère.
+___
+.center-img[
+.pull-left[
+Chaque pays peut-être caractérisé par son code, son nom, sa superficie, sa population
+```{r echo=FALSE, out.width="100%"}
+
+df <-
+  data.frame(
+    iso_a3 = " ",
+    Nom = " ",
+    Continent = " ",
+    Superficie = " ",
+    Population = " "
+  )
+
+kable(df, format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    font_size = 10
+  )
+
+```
+]
+
+.pull-right[
+De même que des personnes (Nom, prénom, age, sexe, adresse etc.)
+```{r echo=FALSE, out.width="100%"}
+
+df <-
+  data.frame(
+    Nom = " ",
+    Prénom = " ",
+    Age = " ",
+    Sexe = " ",
+    Adresse = " "
+  )
+
+kable(df, format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    font_size = 10
+  ) 
+```
+]]
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+
+---
+class: animated, fadeIn
+## Rappels de vocabulaire : modalité / valeur
+
+La **modalité**, la **valeur**
+- La valeur descriptive du caractère
+  * modalité pour les données qualitatives
+  * valeur pour les données quantitatives
+
+___
+.center-img[
+.pull-left[
+La valeur de la population Belge est de 10,4 millions d'habitants. La modalité de son code iso est BEL
+```{r echo=FALSE, out.width="100%"}
+
+kable(df.Europe %>% dplyr::filter(Nom == 'Belgium'), format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    font_size = 10
+  ) 
+```
+]
+
+.pull-right[
+Flanders a 60 ans et est un homme. Il réside au 744 Evergreen Terrace, Springfield, USA
+```{r echo=FALSE, out.width="100%"}
+df <-
+  data.frame(
+    Nom = "Flanders",
+    Prénom = "Ned",
+    age = 60,
+    Sexe = "M",
+    adresse = "744 Evergreen Terrace, Springfield, USA"
+  )
+
+kable(df, format = "html") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = T,
+    font_size = 10
+  )
+
+```
+]]
+
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Données quantitatives et qualitatives
+On peut caractériser les données en deux grands types, eux mêmes disposant de sous-caractéristiques. 
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+.pull-left[
+Les données **qualitatives** :
+caractérise la nature de ce qui est décrit et non la quantité. 
+- Un nom
+- Une couleur
+- Le type de sol
+]
+
+--
+
+.pull-right[
+Les données  **quantitatives** :
+Caractérise une quantité, par définition mesurable
+- Une population 
+- Un taux de chômage
+- Une densité
+- L'IDH
+]
+
+---
+class: animated, fadeIn
+## Quantitatives et qualitatives ?
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+Il est important de pouvoir justifier le type de données :
+
+.pull-left[
+- Si la moyenne est impossible ou absurde : qualitatif (code départementaux, numéro de téléphone)
+- Si la moyenne a un sens : quantitatif (population, température)
+]
+
+--
+
+.center-img[
+.pull-right[
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("./assets/images/2-Stat/quanti_quali.png")
+```
+]]
+
+---
+class: animated, fadeIn
+## Les sous types de données qualitatives
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+Les données qualitatives peuvent avoir d'autres propriétés, importantes en cartographie et en statistique
+
+.pull-left[
+Qualitatif **nominal** : contient une notion de différence, aucun ordre
+- Codes départementaux
+- Des prénoms
+- Des numéros étudiants
+*v.s.*
+
+Qualitatif **ordinal**: contient une notion d'ordre sans être mesurable
+- Une classification : grand > moyen > petit
+- Le stade d’une maladie : 1 :) / 2 :| / 3 :(
+]
+
+--
+
+.pull-right[
+Qualitatif **discret** : il y a moins de modalités que d'éléments. 
+- Le statut des hôpitaux : CHU, CHR, CH (3 statuts, 6 000 hôpitaux)
+- Le statut des communes : Capitale, préfecture, sous préfecture
+
+*v.s.*
+
+Qualitatif **exhaustif** : il y a autant de modalités que d'éléments
+- Le nom des pays, des régions
+- Un code
+]
+
+---
+class: animated, fadeIn
+## Les sous types de données quantitatives
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+Les données **quantitatives** peuvent aussi avoir d'autres propriétés, toutes aussi importantes en cartographie et en statistique
+
+.pull-left[
+Quantitatif de **stock** : une quantité brute, un effectif. 
+- La population
+- Une production en tonne
+
+*v.s*
+
+Quantitatif de **taux** : un rapport, un indice. 
+- La densité de population
+- Le taux de chômage
+- L'IDH
+]
+
+---
+class: animated, fadeIn
+## Stock ou taux ?
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+.pull-left[
+Comment faire la différence entre stock et taux ? 
+- Si la somme a une signification : stock (la somme de la population des pays du monde = la population mondiale)
+- Si la somme n'a pas de sens : taux (la somme du taux de chômage des pays du monde ne correspond pas au taux de chômage mondial)
+
+Attention, ce n’est pas parce que la valeur contient une virgule qu’il s’agit d’une données de taux :
+- la France à une population de 66,6 millions d’habitants en 2016
+]
+
+--
+
+.center-img[
+.pull-right[
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("./assets/images/2-Stat/taux_stock.png")
+```
+]]
+
+
+---
+class: animated, fadeIn
+## Les sous types de données quantitatives
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+.pull-left[
+Quantitatif **repérable** : le zéro est conventionnel
+- L'altitude
+
+*v.s.*
+
+Quantitatif **mesurable**: le zéro signifie l'absence concrète
+- Le taux de chômage
+- La population
+]
+
+--
+
+.pull-right[
+Quantitatif **discret** : une variable discrète a un nombre fini ou dénombrable (qu’on peut compter) de valeurs possibles. Elles sont distinctes et séparées, aucune valeur intermédiaire n’est possible : 
+- Le nombre d’étudiants dans cette salle de cours à ce moment de la journée
+- Les pointures de chaussures
+
+*v.s.*
+
+Quantitatif **continu**: il y a un nombre illimité de valeurs (non dénombrables). Entre deux valeurs distinctes, il y a toujours une valeur intermédiaire possible : 
+- Le taux de chômage 
+- La vitesse du vent
+]
+
+On peut transformer une donnée continue en donnée discrète en classant les valeurs dans des classes $\Rightarrow$ discrétisation
+
+---
+class: animated, fadeIn
+## En résumé
+
+.zoom[ .center-img[
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("./assets/images/2-Stat/Caractere.png")
+```
+]]
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: inverse, center, middle, animated, fadeIn  
+#2- Les différents types de tableaux
+<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<div class="my-footer-title "></div> 
+
+---
+class: animated, fadeIn
+## Rappels
+
+Il existe de nombreux type de tableaux en statistique. Leur forme peut dépendre entre autre:
+- Du type de données en amont (comment ont elles été recueillies ?)
+- De la manière dont vous souhaitez analyser vos données (regroupements ?)
+- La manière de mettre en forme les tableaux et les variables est un métier à part dans l’entreprise (data manager)
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Tableau élémentaire de données
+
+.pull-left[
+C'est le cas le plus courant. Il décrit un ensemble d’éléments (lignes du tableau) à l’aide d’un ensemble de caractères (colonnes du tableau).
+- La première colonne est généralement réservée à un caractère servant d’identifiant. 
+- On note *i* un élément quelconque du tableau et *Xi* la " modalité prise par l’élément *i* pour le caractère *X*. "
+- En géographie on parlera de **tableau d'information géographique**
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="100%"}
+
+data.frame(
+  Etudiant = c("A", "B", "C", "D", "E", "F", "G"),
+  groupe = c("1", "1", "2", "2", "3", "3", "3"),
+  UFR = c("GEO", "GEO", "GEO", "HIST", "HIST", "GEO", "HIST")
+) %>%
+  mutate(
+    UFR = cell_spec(UFR, "html", color = ifelse(UFR == "GEO", "#2079BE", "#FFA500")),
+    groupe = cell_spec(groupe, "html", color = ifelse(
+      groupe == "1",
+      "#C2513E",
+      ifelse(groupe == "2", "#FFA500", "#196620")
+    ))
+  ) %>%
+  kable(format = "html", escape = F) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = T,
+    font_size = 15
+  )
+
+```
+]
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Tableau de contingence
+
+C'est un cas particulier de tableau élémentaire :
+- les lignes et les colonnes jouent un rôle symétrique 
+- le contenu des cases correspond à des effectifs qui peuvent être sommés en ligne et en colonne.
+- On peut parfois calculer des moyennes ou tout autre indicateur statistique si les données le permettent
+
+Tout tableau de contingence est le résultat de la transformation d’un tableau élémentaire constitués de deux caractères discrets X et Y décrivant le même ensemble E
+
+Le nombre de ligne d’un tableau de contingence (k) correspond au nombre de modalités du premier caractère discret (X) et le nombre de colonnes (p) correspond au nombre de modalités du second caractère discret (Y)
+
+L’effectif d’une case, noté Nij, correspond au " nombre d’éléments du tableau élémentaire E qui prennent simultanément la modalité i de X et la modalité j de Y ".
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Tableau de contingence
+
+.pull-left[
+Tableau élémentaire de données
+```{r echo=FALSE, out.width="100%"}
+
+data.frame(
+  Etudiant = c("A", "B", "C", "D", "E", "F", "G"),
+  groupe = c("1", "1", "2", "2", "3", "3", "3"),
+  UFR = c("GEO", "GEO", "GEO", "HIST", "HIST", "GEO", "HIST")
+) %>%
+  mutate(
+    UFR = cell_spec(UFR, "html", color = ifelse(UFR == "GEO", "#2079BE", "#FFA500")),
+    groupe = cell_spec(groupe, "html", color = ifelse(
+      groupe == "1",
+      "#C2513E",
+      ifelse(groupe == "2", "#FFA500", "#196620")
+    ))
+  ) %>%
+  kable(format = "html", escape = F) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = T,
+    font_size = 15
+  )
+
+```
+]
+
+.pull-right[
+Transformé en tableau de contingence
+```{r echo=FALSE, out.width="100%"}
+
+data.frame(
+  'UFR x Grp' = c("1", "2", "3", "Total"),
+  GEO = c(2, 1, 1, 4),
+  HIST = c(0, 1, 2, 3),
+  Total = c(2, 2, 3, 7)
+) %>%
+  
+  kable(format = "html", escape = F) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = T,
+    font_size = 15
+  )
+
+```
+]
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Tableau disjonctif complet
+
+C'est le résultat de l'éclatement d'un tableau élémentaire contenant des modalités
+- Les variables sont codées en 0 ou 1 pour l'absence/présence d'un caractère
+- On l'utilise pour certaines analyses spécifiques (analyses factorielles)
+- Ils sont de retour en grâce avec le machine learning
+
+
+
+.pull-left[
+Tableau élémentaire de données
+```{r echo=FALSE, out.width="100%"}
+
+data.frame(
+  Etudiant = c("A", "B", "C", "D", "E", "F", "G"),
+  groupe = c("1", "1", "2", "2", "3", "3", "3"),
+  UFR = c("GEO", "GEO", "GEO", "HIST", "HIST", "GEO", "HIST")
+) %>%
+  mutate(
+    UFR = cell_spec(UFR, "html", color = ifelse(UFR == "GEO", "#2079BE", "#FFA500")),
+    groupe = cell_spec(groupe, "html", color = ifelse(
+      groupe == "1",
+      "#C2513E",
+      ifelse(groupe == "2", "#FFA500", "#196620")
+    ))
+  ) %>%
+  kable(format = "html", escape = F) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = T,
+    font_size = 15
+  )
+
+```
+]
+
+.pull-right[
+Transformé en tableau disjonctif complet
+```{r echo=FALSE, out.width="100%"}
+
+df <- data.frame(
+  groupe = c("1", "1", "2", "2", "3", "3", "3"),
+  UFR = c("GEO", "GEO", "GEO", "HIST", "HIST", "GEO", "HIST")
+)
+row.names(df) = c("A", "B", "C", "D", "E", "F", "G")
+
+acm.disjonctif(subset(df, select = c("groupe", "UFR"))) %>%
+  kable(format = "html", escape = F) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = T,
+    font_size = 15
+  )
+
+```
+]
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+
+---
+class: animated, fadeIn
+## Tableau d’échanges
+
+On partle aussi de matrix de flux
+- Il contient des individus géographiques en ligne et en colonne, qui peuvent ou non être identiques
+- Un tableau ne peut représenter qu'un seul caractère, par exemple les flux de population entre les individus
+- Si le tableau d'échanges n'est pas symétrique, il se lit de la ligne vers la colonne
+
+```{r echo=FALSE, out.width="100%"}
+
+data.frame(
+  Aéroports = c("Paris", "Berlin", "Londres"),
+  Paris = c('-', 15, 5),
+  Berlin = c(10, '-', 20),
+  Londres = c(5, 10, '-')
+) %>%
+  
+  kable(format = "html", escape = F) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = T,
+    font_size = 15
+  )
+
+```
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+
+---
+class: inverse, center, middle, animated, fadeIn  
+#3- Et les logiciels ?
+<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<div class="my-footer-title "></div> 
+
+
+---
+class: inverse, center, middle, animated, fadeIn  
+# Conclusion
+
+<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<div class="my-footer-title "></div> 
+
+---
+class: animated, fadeIn 
+## Concepts-clés 
+
+Les géographes utilisent de **l'information géographique**, localisable dans l'espace.
+- Il existe un vocabulaire propre aux données statistiques, qu'il est nécessaire de connaître.
+- Les données peuvent être regroupées selon plusieurs **propriétés**
+- Qu'il faut maîtriser, car les règles de la sémiologie graphique et les outils statistiques en **dépendent** !   
+
+Plusieurs types de tableaux existent et il est nécessaire de les reconnaître
+- Les tableaux élémentaires de données sont les plus courants, avec en ligne les individus et en colonnes leurs caractères
+- Les tableaux de contingence permettent de croiser des caractères
+- Les tableaux d'échanges sont très appréciées des géographes
+
+<div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
