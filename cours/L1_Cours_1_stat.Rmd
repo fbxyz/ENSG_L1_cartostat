@@ -58,12 +58,13 @@ annee = Sys.getenv("annee")
 
 ```
 
+
 class: center, middle, inverse, title-slide, animated, fadeIn
 # ENSG : statistiques appliquées en cartographie `r annee`
 # Rappels - les données en géographie et en statistique<br /> <br />
 ### Florian Bayer
 
-<img src="./assets/css/logo_p1_col.jpg" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
+<img src="https://i.imgur.com/vyaCUhe.png?2" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
 
 <div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
 
@@ -111,14 +112,14 @@ Les données utilisées en cartographie et statistique proviennent de multiples 
 .center-img[.pull-left[
 Données qualitatives
 ```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("./assets/images/2-Stat/Quali.png")
+knitr::include_graphics("https://i.imgur.com/LURhogM.png")
 ```
 ]
 
 .pull-right[
 Données quantitatives
 ```{r echo=FALSE, out.width="70%"}
-knitr::include_graphics("./assets/images/2-Stat/Quanti.png")
+knitr::include_graphics("https://i.imgur.com/wBuBuHn.png")
 ```
 ]]
 
@@ -136,7 +137,7 @@ Il est nécessaire de **restructurer** ces données, le plus souvent sous la for
 class: inverse, center, middle, animated, fadeIn  
 # 1- Les données en cartographie
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -167,14 +168,14 @@ ___
 .pull-left[
 Ensemble des unités statistiques étudiées : les pays européens
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/Europe.png")
+knitr::include_graphics("https://i.imgur.com/4dD18qR.png")
 ```
 ]
 
 .pull-right[
 Mais la population peut aussi correspondre à des personnes : 
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/simpson.png")
+knitr::include_graphics("https://i.imgur.com/xNqymK8.png")
 ```
 ]]
 
@@ -226,7 +227,7 @@ kable(df.Europe %>% dplyr::select("iso_a3", "Nom", "Continent"),
 .pull-right[
 Flanders est un individu de l'ensemble des personnages des Simpsons
 ```{r echo=FALSE, out.width="50%"}
-knitr::include_graphics("./assets/images/2-Stat/flanders.gif")
+knitr::include_graphics("https://i.imgur.com/4IvhODR.gif")
 ```
 ]]
 
@@ -380,7 +381,7 @@ Il est important de pouvoir justifier le type de données :
 .center-img[
 .pull-right[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/quanti_quali.png")
+knitr::include_graphics("https://i.imgur.com/E5PQNoK.png")
 ```
 ]]
 
@@ -456,7 +457,7 @@ Attention, ce n’est pas parce que la valeur contient une virgule qu’il s’a
 .center-img[
 .pull-right[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/taux_stock.png")
+knitr::include_graphics("https://i.imgur.com/feMB7iW.png")
 ```
 ]]
 
@@ -499,7 +500,7 @@ class: animated, fadeIn
 
 .zoom[ .center-img[
 ```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("./assets/images/2-Stat/Caractere.png")
+knitr::include_graphics("https://i.imgur.com/5bzqWYD.png")
 ```
 ]]
 
@@ -508,7 +509,7 @@ knitr::include_graphics("./assets/images/2-Stat/Caractere.png")
 ---
 class: inverse, center, middle, animated, fadeIn  
 #2- Les différents types de tableaux
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -726,7 +727,7 @@ data.frame(
 ---
 class: inverse, center, middle, animated, fadeIn  
 #3- Et les logiciels ?
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 
@@ -734,7 +735,7 @@ class: inverse, center, middle, animated, fadeIn
 class: inverse, center, middle, animated, fadeIn  
 # Conclusion
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---

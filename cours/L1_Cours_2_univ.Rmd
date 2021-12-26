@@ -59,7 +59,7 @@ class: center, middle, inverse, title-slide, animated, fadeIn
 # Cours n°2- l'analyse univariée<br /> <br />
 ### Florian Bayer
 
-<img src="./assets/css/logo_p1_col.jpg" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
+<img src="https://i.imgur.com/vyaCUhe.png?2" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
@@ -100,7 +100,7 @@ L’analyse univariée se fait à l’aide de la combinaison **graphiques** et *
 class: inverse, center, middle, animated, fadeIn  
 # 1- Analyse univariée : les graphiques
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -209,7 +209,7 @@ Selon le type de données (qualitatives / quantitatives, discrètes ou continues
 
 .center-img[
 ```{r echo=FALSE, out.width="70%"}
-knitr::include_graphics("./assets/images/2-Stat/plotly-example-plots.png")
+knitr::include_graphics("https://i.imgur.com/OskOUxi.png")
 ```
 ] 
 
@@ -331,7 +331,7 @@ Si les classes ne sont pas de même amplitudes (de 10 à 20, puis de 20 à 120),
 
 .center-img[
 ```{r echo=FALSE, out.width="70%"}
-knitr::include_graphics("./assets/images/2-Stat/histo.png")
+knitr::include_graphics("https://i.imgur.com/S1NvL7q.png")
 ```
 ] 
 
@@ -397,7 +397,7 @@ Attention à ne pas confondre histogramme et diagramme en bâton. Sous Excel, l�
 
 .center-img[
 ```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("./assets/images/2-Stat/histo-barre.png")
+knitr::include_graphics("https://i.imgur.com/bJULGtt.png")
 ```
 ] 
 
@@ -503,7 +503,7 @@ Un graphique est simple à comprendre, mais son interprétation peut-être **sub
 class: inverse, center, middle, animated, fadeIn  
 # 2- Analyse univariée : les valeurs centrales
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -525,7 +525,7 @@ Les principaux outils de l’analyse univariée peuvent être classer en 2 famil
 class: inverse, center, middle, animated, fadeIn  
 # 2.1 - Les valeurs centrales
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -579,7 +579,7 @@ La valeur qui partage une série ordonnée en **deux sous ensembles d'effectifs 
 
 .center-img[
 ```{r echo=FALSE, out.width="70%"}
-knitr::include_graphics("./assets/images/2-Stat/billou.png")
+knitr::include_graphics("https://i.imgur.com/yfZZDjg.png")
 ```
 ] 
 
@@ -658,7 +658,7 @@ Extrait du cours de Michèle Béguin, Denise Pumain, Myriam Baron :
 
 .center-img[
 ```{r echo=FALSE, out.width="70%"}
-knitr::include_graphics("./assets/images/2-Stat/centrale.png")
+knitr::include_graphics("https://i.imgur.com/zWuSN3j.png")
 ```
 ]
 
@@ -744,7 +744,7 @@ ggplot(df.prof_melt, aes(x = value, fill = variable, color = variable)) +
 class: inverse, center, middle, animated, fadeIn  
 # 2.2 - Les paramètres de dispersion
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -853,7 +853,7 @@ Lorsqu'une distribution est normale (on dit aussi gaussienne), les probabilités
 
 .pull-right[.center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/loi_normale.png")
+knitr::include_graphics("https://i.imgur.com/MHTi7hT.png")
 ```
 ]]
 
@@ -913,7 +913,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_1.png")
+knitr::include_graphics("https://i.imgur.com/l6DEMl0.png")
 ```
 ]
 
@@ -925,7 +925,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_2.png")
+knitr::include_graphics("https://i.imgur.com/y6ZiUot.png")
 ```
 ]
 
@@ -937,7 +937,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_3.png")
+knitr::include_graphics("https://i.imgur.com/jKIxXfs.png")
 ```
 ]
 
@@ -949,7 +949,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_4.png")
+knitr::include_graphics("https://i.imgur.com/bbzQm91.png")
 ```
 ]
 
@@ -961,7 +961,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_5.png")
+knitr::include_graphics("https://i.imgur.com/Q2Sacbm.png")
 ```
 ]
 
@@ -973,7 +973,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_6.png")
+knitr::include_graphics("https://i.imgur.com/QO8SSfV.png")
 ```
 ]
 
@@ -985,7 +985,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/var_7.png")
+knitr::include_graphics("https://i.imgur.com/Hesulh1.png")
 ```
 ]
 
@@ -1025,7 +1025,7 @@ Le plus utilisé est le coefficient de variation (CV). Il peut être exprimé en
 class: inverse, center, middle, animated, fadeIn  
 # 2.3 - Autres outils de l'analyse univariée
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 
@@ -1044,7 +1044,7 @@ Entre Min et Q1, on a  25% de la fréquence des effectifs de la série, les 25% 
 
 .center-img[
 ```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("./assets/images/2-Stat/quantiles.png")
+knitr::include_graphics("https://i.imgur.com/P2vg3oz.png")
 ```
 ] 
 
@@ -1081,7 +1081,7 @@ Les valeurs restantes sont appelées **outliers** et correspondent aux valeurs e
 ]]
 .pull-right[.center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/boxplot.png")
+knitr::include_graphics("https://i.imgur.com/txDqRwD.png")
 ```
 ]]
 
@@ -1141,7 +1141,7 @@ Il est de nouveau préférable de confirmer cet indicateur graphiquement.
 
 .pull-right[ .center-img[
 ```{r echo=FALSE, out.width="75%"}
-knitr::include_graphics("./assets/images/2-Stat/skew.png")
+knitr::include_graphics("https://i.imgur.com/hoO6VWA.png")
 ```
 ] ]
 
@@ -1162,7 +1162,7 @@ Attention, le kurtosis d’une loi normale est normalement égale à 3, mais pou
 
 .pull-right[ .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/2-Stat/applat.png")
+knitr::include_graphics("https://i.imgur.com/UyMuG4i.png")
 ```
 ] ]
 
@@ -1196,7 +1196,7 @@ La statistique JB se teste via une loi du $\chi^2$ à deux degrés de liberté. 
 class: inverse, center, middle, animated, fadeIn  
 # Conclusions
 
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---

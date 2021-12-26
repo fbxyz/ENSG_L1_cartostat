@@ -58,7 +58,7 @@ class: center, middle, inverse, title-slide, animated, fadeIn
 <br />
 ### florian.bayer@gmail.com
 
-<img src="./assets/css/logo_p1_col.jpg" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
+<img src="https://i.imgur.com/vyaCUhe.png?2" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
@@ -108,7 +108,7 @@ Un TD en deux parties pour mettre en pratique les acquis :
 ---
 class: inverse, center, middle, animated, fadeIn
 # Contenu de l'enseignement
-<img src="./assets/css/graticules.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -118,7 +118,7 @@ class: animated, fadeIn
 
 .zoom[ .center-img[
 ```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("./assets/images/1_Intro/schema.png")
+knitr::include_graphics("https://i.imgur.com/a1cdFjb.png") 
 ```
 ] ]
 
@@ -132,7 +132,7 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("./assets/images/1_Intro/distrib.png")
+knitr::include_graphics("https://i.imgur.com/rjyCWc3.png")
 ```
 ]
 
@@ -148,11 +148,74 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="90%"}
-knitr::include_graphics("./assets/images/1_Intro/icf_ex.png")
+knitr::include_graphics("https://i.imgur.com/IkQQ5dF.png")
 ```
 ]
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
 
+---
+class: inverse, center, middle, animated, fadeIn  
+# Rappels en cartographie
 
+<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+<div class="my-footer-title "></div> 
+
+---
+class: animated, fadeIn 
+## Concepts-clés de la cartographie
+
+- La carte **communique** une information par **l'image**.   
+- Elle utilise un langage **conceptualisé** par Jacques Bertin, la sémiologie graphique : alphabet, vocabalaire et syntaxe.    
+- Des **biais cognitifs** interviendront dans la conception de la carte (vision du cartographe sur ce qu'il observe).   
+
+Pour les réduire et rendre votre message efficace, il faut faire en sorte :
+- d'utiliser les règles de la conception cartographique 
+- de penser la carte **pour son public** et non pour soi
+- d'**adapter le message** cartographique 
+  > -au public   
+  > -au support   
+  > -à vos objectifs
+  
+<div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
+
+
+---
+## Le message cartographique
+
+Le message cartographique **guide l’ensemble de la production d'une carte**.   
+Il faut toujours avoir conscience des points suivants :
+- La carte n’est pas faite pour son auteur mais pour ses **lecteurs**
+- Il faut **adapter son message** aux types de lecteurs et au support de la carte
+- La carte doit être **simple et efficace** au niveau du rendu (pas dans sa conception). 
+- Le lecteur doit fournir un **minimum d’effort** pour comprendre la carte dès le premier coups d’œil
+- Les cartes sont un ensemble de petits mensonges communément acceptés (pour simplifier la compréhension du message)
+- La carte est un outil de **communication très puissant**. Son utilisation doit se faire de manière **honnête et objective**
+
+Cela passe par la bonne application des règles de la sémiologie graphique à l'ensemble de ces points
+Mais aussi dans certains cas un choix judicieux (rarement parfait) d'une **discrétisation**
+
+<div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
+
+---
+## Avant de faire une carte
+<div class="my-footer"><span>Université Paris 1 Panthéon Sorbonne - M1  `r annee` : cartographie et statistique - Florian Bayer</span></div> 
+
+Identifier **l’objectif** de votre carte, réfléchir à la **problématique** :
+- Dois je faire une carte pour y répondre ?
+- Dans quel contexte ? 
+  * Explorer ?
+  * Communiquer ?
+- Quel est le message à faire passer ?   
+
+Identifier votre public
+- Des experts sur le sujet ? Des novices ?
+
+Identifier le support 
+- Papier ? Informatique ?  
+- Couleur ? Noir et blanc ?  
+
+Ensuite, vous pouvez identifier les informations à utiliser. Les règles de représentation des données en découleront et la discrétisation sera à adapter
+
+<div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
