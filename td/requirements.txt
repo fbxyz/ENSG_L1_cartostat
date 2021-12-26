@@ -1,0 +1,4 @@
+pandas
+altair
+seaborn
+scipy
