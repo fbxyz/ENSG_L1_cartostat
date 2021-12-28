@@ -1,4 +1,6 @@
+numpy
 pandas
-altair
-seaborn
+statsmodels
 scipy
+matplotlib
+seaborn
