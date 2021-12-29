@@ -222,7 +222,7 @@ class: animated, fadeIn
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
 
-On représente généralement les **données qualitatives discrètes / exhaustives** à l'aide d'un diagramme en bâton. Il faut réaliser un **dénombrage** à l’aide un tableau de contingence. 
+On représente généralement les **données qualitatives discrètes / exhaustives** à l'aide d'un diagramme en bâton. Il faut réaliser un **dénombrage** à l'aide d'un tableau de contingence. 
 
 Le diagramme en bâton : 
 - La hauteur de chaque bâtons (y) est égale au nombre d’individus dans la modalité correspondante.
@@ -325,9 +325,9 @@ class: animated, fadeIn
 
 Les données de stock se représentent par un **histogramme** et non un diagramme en bâton. La surface à représenter doit être proportionnelle à la quantité contenue dans la classe.
 
-L’idéal est de créer des **classes d’amplitudes égales** (les classes vont de 10 en 10 ou de 20 en 20). Le graphique ressemblera alors à un diagramme en bâton, sans discontinuité.
+L’idéal est de créer des **classes d’amplitudes égales** (les classes vont de 10 en 10 ou de 20 en 20). Le graphique ressemble alors à un diagramme en bâton, sans discontinuité.
 
-Si les classes ne sont pas de même amplitudes (de 10 à 20, puis de 20 à 120), la surface de la colonne (et non sa hauteur) doit être proportionnelle au nombres d’individus représentés. Dans la cas contraire, l’impression visuelle ne sera pas conforme à la réalité. Peu de logiciels proposent cette foncitonnalité, il est donc préférable de faire des classes d'amplitudes égales.
+Si les classes ne sont pas de même amplitude (de 10 à 20, puis de 20 à 120), la surface de la colonne (et non sa hauteur) doit être proportionnelle au nombre d’individus représentés. Dans la cas contraire, l’impression visuelle ne sera pas conforme à la réalité. Peu de logiciels proposent cette fonctionnalité, il est donc préférable de faire des classes d'amplitudes égales.
 
 .center-img[
 ```{r echo=FALSE, out.width="70%"}
@@ -420,8 +420,8 @@ class: animated, fadeIn
 ## Le mode de la série
 
 .pull-left[
-- La série est **<span style="color:#f8766d">unimodale</span>** : les données sont concentrées autours d’un seul point.
-- La série est **<span style="color:#00bfc4">multimodale</span>** : les données sont concentrées autours d’un mode principale et un ou plusieurs modes secondaires.
+- La série est **<span style="color:#f8766d">unimodale</span>** : les données sont concentrées autour d’un seul point.
+- La série est **<span style="color:#00bfc4">multimodale</span>** : les données sont concentrées autour d’un mode principal et un ou plusieurs modes secondaires.
 ]
 
 .pull-right[
@@ -480,7 +480,7 @@ ggplot(
 ```
 ]
 
-Cette approche graphique permet déjà de poser des hypothèses sur nos données. Le castor 3 a une température normale (autours de 37°C) alors que le castor 4 semble en hypothermie, à l'inverse du castor 5 qui pourrait faire une réaction inflammatoire.
+Cette approche graphique permet déjà de poser des hypothèses sur nos données. Le castor 3 a une température normale (autour de 37°C) alors que le castor 4 semble en hypothermie, à l'inverse du castor 5 qui pourrait faire une réaction inflammatoire.
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
@@ -515,9 +515,9 @@ Une série de données **doit être caractérisée** par des calculs **scientifi
 - factuelle
 - et reproductible.
 
-Les principaux outils de l’analyse univariée peuvent être classer en 2 familles :
+Les principaux outils de l’analyse univariée peuvent être classés en 2 familles :
 - Les valeurs centrales.
-- Les paramètres de dispersions.
+- Les paramètres de dispersion.
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
@@ -539,7 +539,7 @@ Elles permettent de **résumer** une série en une seule valeur. Il existe 3 typ
 
 Elles n’ont pas la même signification et doivent donc être toutes calculées lorsque l’on souhaite résumer une série statistique (quitte à conserver la plus adaptée à la fin).
 
-A noter que la classe modale est la seule valeur centrale utilisable pour les données qualitatives, après dénombrement (cf. diagramme en baton)
+A noter que la classe modale est la seule valeur centrale utilisable pour les données qualitatives, après dénombrement (cf. diagramme en bâton)
 
 <div class="my-footer"><span>Université Paris 1 Panthéon Sorbonne - L3 `r annee` : analyse de données - Florian Bayer</span></div>
 
@@ -668,7 +668,7 @@ knitr::include_graphics("https://i.imgur.com/zWuSN3j.png")
 class: animated, fadeIn
 ## Moyenne, mode et médiane : limites 2
 .pull-left[
-*Le résumé d'une distribution que donne une valeur centrale ne nous renseigne pas sur la __dispersion__ des valeurs autour de cette valeur centrale, c'est-à-dire sur la tendance qu'elles-ont à se concentrer ou se disperser autour de celle-ci. (Claude Grasland)*
+*Le résumé d'une distribution que donne une valeur centrale ne nous renseigne pas sur la __dispersion__ des valeurs autour de cette valeur centrale, c'est-à-dire sur la tendance qu'elles ont à se concentrer ou se disperser autour de celle-ci. (Claude Grasland)*
 ]
 
 .pull-right[
@@ -812,7 +812,7 @@ df.EAM %>%
 .pull-right[
 Les notes s’écartent de 1,33 par rapport à la moyenne : **relativement homogène**.   
 Si on fait le calcul pour les notes du professeur *y*, on trouvera 3.6 : **notes hétérogènes**.   
-Cet indicateur est facile à comprendre mais n’a pas les propriétés statistiques intéressante. On préfère donc utiliser l'écart-type.   
+Cet indicateur est facile à comprendre mais n’a pas les propriétés statistiques intéressantes. On préfère donc utiliser l'écart-type.   
 ]
 
 
@@ -824,7 +824,7 @@ class: animated, fadeIn
 
 La variance n’est pas un paramètre de dispersion en elle-même, mais une mesure **GLOBALE** de la variation autour de la moyenne (quantité d’information).
 - Comme l'écart absolu moyen c'est une moyenne des écarts à la moyenne
-- mais calculé avec le théorême de Pythagore et non plus avec la valeur absolue 
+- mais calculé avec le théorème de Pythagore et non plus avec la valeur absolue 
 
 Pour obtenir un paramètre de dispersion absolue, on effectue la racine carrée de la variance, appelée **écart-type**.
 
@@ -1016,7 +1016,7 @@ Les paramètres de dispersion absolus ne permettent pas de comparer des séries 
 - Indépendamment de l’unité de mesure.
 
 Le plus utilisé est le coefficient de variation (CV). Il peut être exprimé en %. Plus la valeur du coefficient de variation est élevée, plus la dispersion autour de la moyenne est grande.
-- CV = Ecart-type / moyenne
+- CV = Écart-type / moyenne
 
 <div class="my-footer"><span>Université Paris 1 Panthéon Sorbonne - L3 `r annee` : analyse de données - Florian Bayer</span></div>
 
@@ -1105,7 +1105,7 @@ p
 ]
 
 .pull-right[
-La comparaison des distributions et de leur forme est très facile avec le box plot (ici en 1,5x l’intervalle interquartile, on le reconnait aux outliers -valeurs hors norme- en forme de points).  
+La comparaison des distributions et de leur forme est très facile avec le box plot (ici en 1,5x l’intervalle interquartile, on le reconnaît aux outliers -valeurs hors norme- en forme de points).  
 
 L’avantage des box plots est qu’ils sont construits de manière **objective** (quartile). C’est-à-dire que la seule intervention du concepteur sur le graphique est le choix de cette méthode de représentation…
 ]
@@ -1116,7 +1116,7 @@ L’avantage des box plots est qu’ils sont construits de manière **objective*
 class: animated, fadeIn
 ## Mesure statistique de la forme d'une série
 
-La forme d'une série peut être évaluer graphiquement, mais cette approche reste subjective. Certains se contente de comparer la position de la moyenne et de la médiane, mais sans réel formalisme.
+La forme d'une série peut être évaluée graphiquement, mais cette approche reste subjective. Certains se contentent de comparer la position de la moyenne et de la médiane, mais sans réel formalisme.
 
 Il exite des outils statistiques plus objectifs pour qualifier la forme d'une série :
 
@@ -1172,7 +1172,7 @@ knitr::include_graphics("https://i.imgur.com/UyMuG4i.png")
 class: animated, fadeIn
 ## Vérifier la normalité avec des tests
 
-Il existe également des tests statistiques pour déterminer si une série suit une loi particulière. On utilise généralement un test de Shapiro-Wilk (moins de 50 individius) ou de Kolmogorov-Smirnov. 
+Il existe également des tests statistiques pour déterminer si une série suit une loi particulière. On utilise généralement un test de Shapiro-Wilk 
 
 Un test de normalité calculable à la main est celui de Jarque-Bera, de Il se base sur le coefficient d'asymétrie et le kurtosis.
 
@@ -1212,7 +1212,7 @@ Cette analyse se fait à l'aide de deux approches complémentaires :
 - Le calcul mathématique, objectif, qui fourni un résumé de la distribution (valeur centrale), des informations sur la dispersion des données (paramètres de dispersion) et sur la forme de la série (asymétrie, kurtosis).
 
 Pour les graphiques :
-- La représentation des données qualitatives se fait avec un diagramme en baton. Il faut souvent *dénombrer* les données à l'aide d'une tableau de contingence. 
+- La représentation des données qualitatives se fait avec un diagramme en bâton. Il faut souvent *dénombrer* les données à l'aide d'un tableau de contingence. 
 - La représentation des données quantitatives se fait avec un histogramme ou un boxplot.
 
 ---
@@ -1226,7 +1226,7 @@ Pour résumer une série, on utilise les valeurs centrales:
 
 Résumer une série avec une seule valeur centrale n'est pas suffisant. Il faut également mesurer sa variabilité à l'aide d'un paramètre de dispersion :
 - à l'aide de l'écart-type, qui avec la moyenne possède une signification probabiliste pour les distributions qui suivent une loi normale.
-- A l'aide de l'interval interquartile. 
+- A l'aide de l'intervalle interquartile. 
 - Ces paramètres de dispersion sont absolus : ils s'expriment dans la même unité que la série. Des paramètres de dispersion relatifs permettent de supprimer l'unité et donc de comparer des variabilités de différentes séries (coefficient de variation, coefficient interquartile)
 
 
@@ -1239,7 +1239,9 @@ Il faut toujours avoir conscience que vos données reflètent une réalité :
 - directement observable (un nombre d'habitants)
 - ou calculée (une densité de population, soit le nombre d'habitants en supprimant l'effet de taille du maillage observé)
 
-Attention, faire un graphique et donner le résultat d’un calcul n’est pas une plus-value : un logiciel de statistique peu le faire automatiquement. 
+Attention, faire un graphique et donner le résultat d’un calcul n’est pas une plus-value : un logiciel de statistique peut le faire automatiquement. 
 
 Ce sont vos capacités à les interpréter dans le contexte de votre étude qui priment !
+
+
 

@@ -99,7 +99,7 @@ class: animated, fadeIn
 ## TD
 
 Un TD en deux parties pour mettre en pratique les acquis :
-- Analyse d'une série de données en géographique
+- Analyse d'une série de données en géographie
 - Choix de méthodes de discrétisation
 - Création de cartes avec Qgis (à installer sur vos ordinateurs)
 
@@ -142,7 +142,7 @@ knitr::include_graphics("https://i.imgur.com/rjyCWc3.png")
 class: animated, fadeIn
 ## Discrétisation
 
-- Savoir **quand** il est nécessaire de discrétiser en cartographie et en statitique
+- Savoir **quand** il est nécessaire de discrétiser en cartographie et en statistique
 - Connaître les **principes** et **méthodes** de la discrétisation
 - S'appuyer sur le message cartographique et l'analyse univariée pour **choisir** et **justifier** sa méthode de discrétisation
 
@@ -167,7 +167,7 @@ class: animated, fadeIn
 ## Concepts-clés de la cartographie
 
 - La carte **communique** une information par **l'image**.   
-- Elle utilise un langage **conceptualisé** par Jacques Bertin, la sémiologie graphique : alphabet, vocabalaire et syntaxe.    
+- Elle utilise un langage **conceptualisé** par Jacques Bertin, la sémiologie graphique : alphabet, vocabulaire et syntaxe.    
 - Des **biais cognitifs** interviendront dans la conception de la carte (vision du cartographe sur ce qu'il observe).   
 
 Pour les réduire et rendre votre message efficace, il faut faire en sorte :
@@ -182,6 +182,7 @@ Pour les réduire et rendre votre message efficace, il faut faire en sorte :
 
 
 ---
+class: animated, fadeIn
 ## Le message cartographique
 
 Le message cartographique **guide l’ensemble de la production d'une carte**.   
@@ -199,6 +200,7 @@ Mais aussi dans certains cas un choix judicieux (rarement parfait) d'une **discr
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
 ---
+class: animated, fadeIn
 ## Avant de faire une carte
 <div class="my-footer"><span>Université Paris 1 Panthéon Sorbonne - M1  `r annee` : cartographie et statistique - Florian Bayer</span></div> 
 
@@ -219,3 +221,6 @@ Identifier le support
 Ensuite, vous pouvez identifier les informations à utiliser. Les règles de représentation des données en découleront et la discrétisation sera à adapter
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
+
+
+

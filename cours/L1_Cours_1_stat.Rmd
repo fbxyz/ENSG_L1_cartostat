@@ -83,14 +83,14 @@ les **méthodes** ne seront pas les mêmes pour **caractériser** le prénom le 
 Les objectifs de ce cours sont donc :
 
 - de réviser le **vocabulaire** portant sur les données en cartographie et en statistique
-- d'apprendre à **reconnaitre** les différents types de données et de tableaux
+- d'apprendre à **reconnaître** les différents types de données et de tableaux
 
 ---
 class: animated, fadeIn
 ## L’information géographique
 <div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
 
-Le géographe a pour particularité de s’intéresser aux **lieux** auxquels sont rattachés les données.
+Le géographe a pour particularité de s’intéresser aux **lieux** auxquelles sont rattachées les données.
 - Une information non localisable a donc peu d’intérêt pour le géographe
 
 Le géographe utilise donc de l’**information géographique**, c’est-à-dire localisable dans l’espace : 
@@ -129,7 +129,7 @@ class: animated, fadeIn
 
 <div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
 
-Les données peuvent être récupérer sous forme de tableaux (*i.e. INSEE*), ou bien issues de différentes sources (livres, articles, pixels).
+Les données peuvent être récupérées sous forme de tableaux (*i.e. INSEE*), ou bien issues de différentes sources (livres, articles, pixels).
 
 Il est nécessaire de **restructurer** ces données, le plus souvent sous la forme d'un nouveau tableau. Les différents types de tableaux seront abordés dans la seconde partie du cours.
 
@@ -341,7 +341,7 @@ kable(df, format = "html") %>%
 ---
 class: animated, fadeIn
 ## Données quantitatives et qualitatives
-On peut caractériser les données en deux grands types, eux mêmes disposant de sous-caractéristiques. 
+On peut caractériser les données en deux grands types, eux-mêmes disposant de sous-caractéristiques. 
 
 <div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
 
@@ -372,8 +372,8 @@ class: animated, fadeIn
 Il est important de pouvoir justifier le type de données :
 
 .pull-left[
-- Si la moyenne est impossible ou absurde : qualitatif (code départementaux, numéro de téléphone)
-- Si la moyenne a un sens : quantitatif (population, température)
+- Si la moyenne est impossible ou absurde : qualitatif (code départementaux, numéro de téléphone)
+- Si la moyenne a un sens : quantitatif (population, température)
 ]
 
 --
@@ -400,7 +400,7 @@ Qualitatif **nominal** : contient une notion de différence, aucun ordre
 *v.s.*
 
 Qualitatif **ordinal**: contient une notion d'ordre sans être mesurable
-- Une classification : grand > moyen > petit
+- Une classification : grand > moyen > petit
 - Le stade d’une maladie : 1 :) / 2 :| / 3 :(
 ]
 
@@ -408,8 +408,8 @@ Qualitatif **ordinal**: contient une notion d'ordre sans être mesurable
 
 .pull-right[
 Qualitatif **discret** : il y a moins de modalités que d'éléments. 
-- Le statut des hôpitaux : CHU, CHR, CH (3 statuts, 6 000 hôpitaux)
-- Le statut des communes : Capitale, préfecture, sous préfecture
+- Le statut des hôpitaux : CHU, CHR, CH (3 statuts, 6 000 hôpitaux)
+- Le statut des communes : Capitale, préfecture, sous préfecture
 
 *v.s.*
 
@@ -444,9 +444,9 @@ class: animated, fadeIn
 <div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
 
 .pull-left[
-Comment faire la différence entre stock et taux ? 
-- Si la somme a une signification : stock (la somme de la population des pays du monde = la population mondiale)
-- Si la somme n'a pas de sens : taux (la somme du taux de chômage des pays du monde ne correspond pas au taux de chômage mondial)
+Comment faire la différence entre stock et taux ? 
+- Si la somme a une signification : stock (la somme de la population des pays du monde = la population mondiale)
+- Si la somme n'a pas de sens : taux (la somme du taux de chômage des pays du monde ne correspond pas au taux de chômage mondial)
 
 Attention, ce n’est pas parce que la valeur contient une virgule qu’il s’agit d’une données de taux :
 - la France à une population de 66,6 millions d’habitants en 2016
@@ -517,7 +517,7 @@ class: animated, fadeIn
 ## Rappels
 
 Il existe de nombreux type de tableaux en statistique. Leur forme peut dépendre entre autre:
-- Du type de données en amont (comment ont elles été recueillies ?)
+- Du type de données en amont (comment ont-elles été recueillies ?)
 - De la manière dont vous souhaitez analyser vos données (regroupements ?)
 - La manière de mettre en forme les tableaux et les variables est un métier à part dans l’entreprise (data manager)
 
@@ -698,7 +698,7 @@ acm.disjonctif(subset(df, select = c("groupe", "UFR"))) %>%
 class: animated, fadeIn
 ## Tableau d’échanges
 
-On partle aussi de matrix de flux
+On parle aussi de matrice de flux
 - Il contient des individus géographiques en ligne et en colonne, qui peuvent ou non être identiques
 - Un tableau ne peut représenter qu'un seul caractère, par exemple les flux de population entre les individus
 - Si le tableau d'échanges n'est pas symétrique, il se lit de la ligne vers la colonne
@@ -753,3 +753,6 @@ Plusieurs types de tableaux existent et il est nécessaire de les reconnaître
 - Les tableaux d'échanges sont très appréciées des géographes
 
 <div class="my-footer"><span>ENSG -L1 `r annee`Statistiques appliquées en cartographie - Florian Bayer</span></div> 
+
+
+

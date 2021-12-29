@@ -217,7 +217,7 @@ Avantage de la variable visuelle forme pour les données quantitatives de stock 
 class: animated, fadeIn
 ## Données quantitatives de taux
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
-La longueur de la variable visuelle valeur ne permet pas à l'oeil d'associer un niveau de gris à une seule valeur. Seule la notion d'ordre est transmise. Il est nécessaire de réduire le nombre de niveau de gris pour y associer une plage de valeur (de 0 à 7, puis de 7 à 15 par exemple).
+La longueur de la variable visuelle valeur ne permet pas à l'œil d'associer un niveau de gris à une seule valeur. Seule la notion d'ordre est transmise. Il est nécessaire de réduire le nombre de niveaux de gris pour y associer une plage de valeur (de 0 à 7, puis de 7 à 15 par exemple).
 
 .center-img[
 ```{r echo=FALSE, out.width="100%"}
@@ -230,10 +230,10 @@ knitr::include_graphics("https://i.imgur.com/u9mwHcH.png")
 class: animated, fadeIn
 ## En amont de la discrétisation
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
-Le rôle du cartographe est de déterminer en amont de la production cartographique **la meilleur discrétisation**. Pour cela, il faut :
-- Se poser les questions : est ce qu'il faut mettre en avant la répartition spatiale la plus **conforme** à la répartition statistique ? Est-ce que ma carte sera **comparée** à une autre ? Dans le temps ? Avec des données de même nature ?
-- Se poser la question : est-ce que mon **public** à besoin d'une discrétisation ''simple'', quitte à perdre une partie de l'information statistique.
-- Analyser la distribution statistique : en la résumant par les **valeurs centrales**, puis par les **paramètres de dispersion**.
+Le rôle du cartographe est de déterminer en amont de la production cartographique **la meilleur discrétisation**. Pour cela, il faut :
+- Se poser les questions : est ce qu'il faut mettre en avant la répartition spatiale la plus **conforme** à la répartition statistique ? Est-ce que ma carte sera **comparée** à une autre ? Dans le temps ? Avec des données de même nature ?
+- Se poser la question : est-ce que mon **public** à besoin d'une discrétisation ''simple'', quitte à perdre une partie de l'information statistique.
+- Analyser la distribution statistique : en la résumant par les **valeurs centrales**, puis par les **paramètres de dispersion**.
 En fonction de ces points, la méthode de discrétisation peut-être **choisie** et **justifiée.**
 
 ---
@@ -246,7 +246,7 @@ Il est essentiel de comprendre **la forme de la distribution** de la ou des sér
 - Elle permet si besoin de mettre en évidence les valeurs **remarquables** et de les faire **apparaître** sur la **carte** ou le diagramme. 
 - Elle évite de créer des classes vides
 - Elle donne les **éléments scientifiques** pour justifier et reproduire ses choix
-Dans le cas contraire, vous risquez d’avoir une carte n’apportant que très peu d’information, car la discrétisation sera mal adaptée au message cartographique.
+Dans le cas contraire, vous risquez d’avoir une carte n’apportant que très peu d'informations, car la discrétisation sera mal adaptée au message cartographique.
 
 ---
 class: animated, fadeIn
@@ -263,7 +263,7 @@ class: animated, fadeIn
 ## Suivre la forme de la distribution : exemple
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
-.pull-left[Les classes ne  suivent pas la forme de la distribution. 
+.pull-left[Les classes ne  suivent pas la forme de la distribution. 
 
 L'histogramme montre bien que la première classe contient des données très hétérogènes, ce qui se traduit par une transmission faussée de l'information sur la carte. 
 
@@ -332,7 +332,7 @@ class: animated, fadeIn
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 En cartographie, le découpage en classes d’une série de données suit les mêmes règles qu’en statistique :
 - Les classes couvrent l’ensemble de la série statistique
-- Elles sont contiguës (il n’y a pas de zone « vide » )
+- Elles sont contiguës (il n’y a pas de zone « vide » )
 - Une valeur ne peut appartenir qu’à une seule classe
 - Aucune classe ne doit être vide
 
@@ -432,7 +432,7 @@ ___
 .pull-right[
 **Inconvénients :**
 - Risque de perte d’information sur la forme de la distribution (mais moins que pour des quantiles).
-- Moins compréhensible par le lecteur que les quantiles (peu utilisée).
+- Moins compréhensible par le lecteur que les quantiles (peu utilisées).
 ]]
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
@@ -450,7 +450,7 @@ ___
 **Avantages : **
 - Très facile à réaliser.
 - Facilement compréhensible par le lecteur.
-- Permet la comparaison dans le temps d’un même phénomène (il faut discrétiser sur une même série comprenant toutes les dates). Les bornes de classes seront les mêmes entre les deux dates.
+- Permet la comparaison dans le temps d’un même phénomène (il faut discrétiser sur une même série comprenant toutes les dates). Les bornes de classe seront les mêmes entre les deux dates.
 - Efficace sur les distributions uniformes.
 ]
 
@@ -476,7 +476,7 @@ ___
 .font90[
 .pull-left[
 **Avantages :**
-- A un sens sur les distribution gaussienne et permet dans ce cas un bon compromis géographique/statistique. Les classes extrèmes montrent les valeurs anormales, les classes centrales les valeurs proches de la normale.
+- A un sens sur les distribution gaussienne et permet dans ce cas un bon compromis géographique/statistique. Les classes extrêmes montrent les valeurs anormales, les classes centrales les valeurs proches de la normale.
 - Facilement compréhensible par le lecteur.
 - Permet la comparaison, si chaque série est gaussienne et si vous utilisez la même méthode de construction. 
 ]
@@ -534,11 +534,11 @@ class: animated, fadeIn
 
 Pour les données de taux, la transmission du message est en grande partie liée à la discrétisation. En cartographie, discrétiser une série statistique suppose donc un **compromis** entre :
 - La représentation et la transmission du message cartographique.
-- Garder les informations de la distribution statistiques.
+- Garder les informations de la distribution statistique.
 
 En règle générale, le nombre de classes va de **4 à 7**
 - En dessous, l’information spatiale sera trop faible.
-- Au delà, la carte sera trop complexe à comprendre : trop d’informations visuelles, la longueur de la variable visuelle valeur ne permet pas à votre oeil d'associer les différents niveaux de gris de la carte avec ceux de la légende.
+- Au-delà, la carte sera trop complexe à comprendre : trop d’informations visuelles, la longueur de la variable visuelle valeur ne permet pas à votre œil d'associer les différents niveaux de gris de la carte avec ceux de la légende.
 
 Vous prendrez un minimum de risques avec une discrétisation en **5 classes.**
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
@@ -573,7 +573,7 @@ Dans certains cas, il est nécessaire de réaliser des cartes dans un objectif d
 - Est-ce que la répartition d’un phénomène A possède la même répartition qu’un phénomène B ?
 
 Deux possibilités s’offrent au cartographe, en fonction du contexte :
-- Soit comparer des donnés de même natures. On privilégiera la comparaison **absolue.** : on compare les unités de mesure. Les bornes de classes doivent donc être identiques.
+- Soit comparer des données de même nature. On privilégiera la comparaison **absolue.** : on compare les unités de mesure. Les bornes de classes doivent donc être identiques.
 - Ou comparer des données de natures différentes. On devra alors comparer les séries de manière **relative** : on compare les n% individus de chaque classe. On fait donc en sorte que les effectifs de classes des différentes séries soient identiques.
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
@@ -594,14 +594,14 @@ class: animated, fadeIn
 
 .center-img[
 ```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics(".https://i.imgur.com/TPTcZBO.png")
+knitr::include_graphics("https://i.imgur.com/TPTcZBO.png")
 ```
 ]
 
 .font80[ 
 Dans cet exemple, une discrétisation Jenks a été appliquée sur les données 2001 :
 - Les valeurs des bornes 2001 ont été retranscrites pour 2009.
-- En ajustant le minimum (11 vs 24) et en rajoutant une classe supplémentaire pour 2009.
+- En ajustant le minimum (11 vs 24) et en ajoutant une classe supplémentaire pour 2009.
 ]
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
@@ -630,7 +630,7 @@ knitr::include_graphics("https://i.imgur.com/hOWDpAl.png")
 
 Une discrétisation en quartile a été appliquée sur les deux séries de données :
 - Les valeurs des bornes sont différentes
-- Mais on peut comparer les 25% régions où le taux de sujets recensés est le plus faible V.S. les 25% régions où les sujets prélevés sont les plus faibles. Idem pour chacune des classes.
+- Mais on peut comparer les 25% régions où le taux de sujets recensé est le plus faible V.S. les 25% des régions où les sujets prélevés sont les plus faibles. Idem pour chacune des classes.
 
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
@@ -646,16 +646,16 @@ class: inverse, center, middle, animated, fadeIn
 class: animated, fadeIn
 ## Concepts clés
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
-La discrétisation des données de taux est obligatoire en cartographie. Il s'agit d'une limite physiologique, l'oeil n'étant pas capable d'associer facilement à plusieurs valeurs de gris plusieurs données.
+La discrétisation des données de taux est obligatoire en cartographie. Il s'agit d'une limite physiologique, l'œil n'étant pas capable d'associer facilement à plusieurs valeurs de gris plusieurs données.
 
-- On **réduit** donc l'information dans des classes pour que l'oeil n'ait qu'un petit (4 à 7) nombre de niveau de gris à analyser.
+- On **réduit** donc l'information dans des classes pour que l'œil n'ait qu'un petit (4 à 7) nombre de niveaux de gris à analyser.
 - Cette réduction implique une **simplification de l'information statistique**. Pour ne pas fausser le message cartographique, il faut **veiller à utiliser une méthode adéquate**.
 - En s'intéressant au message cartographique (public, format, support).
 - En décrivant la série grâce à l'analyse univariée (forme, résumé, dispersion, valeurs extrêmes).
 
 De nombreuses méthodes de discrétisation existent et le choix final dépend évidemment des étapes précédentes.
 
-N’oubliez pas que vous pouvez faire des **ajustements manuels** sur la discrétisation (bornes des classes) si cela est justifié : **soyez pragmatique !**
+N’oubliez pas que vous pouvez faire des **ajustements manuels** sur la discrétisation (bornes des classes) si cela est justifié : **soyez pragmatiques !**
 
 
 
@@ -677,7 +677,7 @@ knitr::include_graphics("https://i.imgur.com/lU0wsvL.png")
 class: animated, fadeIn
 ## Concepts clés
 
-Vous ne voulez pas que l’on vous accuse d’avoir manipuler la discrétisation ? 
+Vous ne voulez pas que l’on vous accuse d’avoir manipulé la discrétisation ? 
 .font90[
 - Utilisez des quantiles (mais vous risquez de ne pas suivre la répartition statistique des données et d’avoir des classes hétérogènes). 
 - Q6 permet de conserver les extrêmes dans des classes à part.
@@ -688,14 +688,14 @@ ___
 Vous ne souhaitez pas comparer votre carte à une autre et voulez suivre au mieux la forme de la distribution ? 
 .font90[
 - Utilisez les seuils naturels avec l'algorithme de Jenks
-- mais vous ne pourrez pas comparer votre carte dans le temps car les bornes des classes des deux cartes seront différents.
+- mais vous ne pourrez pas comparer votre carte dans le temps car les bornes des classes des deux cartes seront différentes.
 ]
 
 ___
 
 Vous devez faire une carte pour le grand public ? 
 .font90[
-- Privilégiez les amplitudes égales avec si possible une amplitudes arrondies (5 en 5, 100 en 100). 
+- Privilégiez les amplitudes égales avec si possible une amplitude arrondies (5 en 5, 100 en 100). 
 - Conservez néanmoins bien le vrai minimum et le vrai maximum.
 ]
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
@@ -704,7 +704,7 @@ Vous devez faire une carte pour le grand public ?
 class: animated, fadeIn
 ## Concepts clés
 
-Votre serie de données suit une loi normale et vous souhaitez montrer les individus géographiques « anormaux » ? 
+Votre serie de données suit une loi normale et vous souhaitez montrer les individus géographiques « anormaux » ? 
 .font90[
 - Utilisez la discrétisation en moyenne écart-type. 
 ]
@@ -966,7 +966,7 @@ df.ex.moy
 2. On ajoute ou on soustrait à la moyenne des demi-écart-type ou 1,5 écart-type
 .center-img[
 ```{r echo=FALSE, out.width="80%"}
-knitr::include_graphics("./assets/images/3-Discrétisation/ect_tab.png")
+knitr::include_graphics("https://i.imgur.com/TVyYDpt.png")
 ```
 ]
 
@@ -1005,4 +1005,6 @@ tm_shape(spdf.ICF) +
 ]
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
+
+
 
