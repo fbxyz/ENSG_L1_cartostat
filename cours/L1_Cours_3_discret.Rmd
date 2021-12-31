@@ -96,7 +96,6 @@ knitr::include_graphics("https://i.imgur.com/a1cdFjb.png")
 class: inverse, center, middle, animated, fadeIn  
 # 1- Les principes de la discrétisation
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -368,7 +367,6 @@ Attention, certaines contraintes peuvent s’ajouter et complexifier la discrét
 class: inverse, center, middle, animated, fadeIn  
 # 2- Les méthodes de discrétisation
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -525,7 +523,6 @@ Il existe un algorithme permettant le calcul optimal des bornes de classes : **J
 class: inverse, center, middle, animated, fadeIn  
 # 3- Questions fréquentes
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -639,7 +636,6 @@ Une discrétisation en quartile a été appliquée sur les deux séries de donn�
 class: inverse, center, middle, animated, fadeIn  
 # Conclusions
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -731,7 +727,6 @@ Vous voulez comparer des données de différentes natures ?
 class: inverse, center, middle, animated, fadeIn  
 # Exemples de discrétisation
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---

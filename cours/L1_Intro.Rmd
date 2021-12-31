@@ -58,7 +58,7 @@ class: center, middle, inverse, title-slide, animated, fadeIn
 <br />
 ### florian.bayer@gmail.com
 
-<img src="https://i.imgur.com/vyaCUhe.png?2" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
+<img src="https://i.imgur.com/gsqKy3x.png" STYLE="position:absolute; BOTTOM:20px; RIGHT:5px; WIDTH:15%;  "/>
 
 <div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
@@ -108,13 +108,13 @@ Un TD en deux parties pour mettre en pratique les acquis :
 ---
 class: inverse, center, middle, animated, fadeIn
 # Contenu de l'enseignement
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+
 <div class="my-footer-title "></div> 
 
 ---
 class: animated, fadeIn
 ## Schéma de production cartographique
-<div class="my-footer"><span>Université Paris 1 Panthéon Sorbonne - M1 `r annee` : cartographie et statistique - Florian Bayer</span></div> 
+<div class="my-footer"><span>ENSG - L1 `r annee` : Statistiques appliquées en cartographie- Florian Bayer</span></div> 
 
 .zoom[ .center-img[
 ```{r echo=FALSE, out.width="100%"}
@@ -157,9 +157,8 @@ knitr::include_graphics("https://i.imgur.com/IkQQ5dF.png")
 
 ---
 class: inverse, center, middle, animated, fadeIn  
-# Rappels en cartographie
+# Rappels de cartographie
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---

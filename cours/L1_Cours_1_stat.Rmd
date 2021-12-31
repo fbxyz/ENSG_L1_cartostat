@@ -137,7 +137,6 @@ Il est nécessaire de **restructurer** ces données, le plus souvent sous la for
 class: inverse, center, middle, animated, fadeIn  
 # 1- Les données en cartographie
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -509,7 +508,7 @@ knitr::include_graphics("https://i.imgur.com/5bzqWYD.png")
 ---
 class: inverse, center, middle, animated, fadeIn  
 #2- Les différents types de tableaux
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+
 <div class="my-footer-title "></div> 
 
 ---
@@ -727,7 +726,7 @@ data.frame(
 ---
 class: inverse, center, middle, animated, fadeIn  
 #3- Et les logiciels ?
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
+
 <div class="my-footer-title "></div> 
 
 
@@ -735,7 +734,6 @@ class: inverse, center, middle, animated, fadeIn
 class: inverse, center, middle, animated, fadeIn  
 # Conclusion
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---

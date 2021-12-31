@@ -1,7 +1,7 @@
 .remark-slide-content {
   background-color: #FAFAFA;
   border-top: 80px solid transparent;
-  background-image: url(https://i.imgur.com/LykLlrz.png);
+  background-image: url(https://i.imgur.com/wpDInTX.png);
   background-origin: border-box;
   background-size: 1000px;
   background-position: -5px -35px;
@@ -9,7 +9,7 @@
   font-weight: 300;
   line-height: 1.5;
   padding: 1em 2em 1em 2em;
-  color: #01326E;
+  color: #747C7C;
 }
 
 .remark-slide-content:before{
@@ -26,7 +26,7 @@
 
 .inverse {
   /*border-top: 80px solid #99d1ca; */
-  background-color: #01326E;
+  background-color: #747C7C;
   text-shadow: none;
   
 }
@@ -37,7 +37,7 @@
   font-size: 45px;
   margin-top: -95px;
   margin-left: -00px;
-  color: #e6e5c0;
+  color: #D9DADB;
 	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
@@ -60,8 +60,8 @@
   font-size: 35px;
   margin-top: -85px;
   margin-left: -00px;
-  color: #e6e5c0;
-	animation: text-shadow-drop-center 0.6s both;
+  color: #D9DADB;
+	/*animation: text-shadow-drop-center 0.6s both;*/
 }
 
 
@@ -116,7 +116,7 @@ position: absolute;
 .title-slide {
     background-color: #FAFAFA;
     border-top: 80px solid transparent;
-    background-image: url(https://i.imgur.com/F5s2xTl.gif);
+    background-image: url(https://i.imgur.com/wpDInTX.png);
     background-origin: border-box;
     background-size: 1000px;
     background-position: 0px -35px;
@@ -124,7 +124,7 @@ position: absolute;
 
 
 .title-slide > h1  {
-  color: #01326E;
+  color: #747C7C;
   font-size: 40px;
   text-shadow: none;
   font-weight: 400;
@@ -135,15 +135,14 @@ position: absolute;
 .title-slide > h2  {
   margin-top: -25px;
   padding-bottom: -20px;
-  color: #01326E;
+  color: #747C7C;
   text-shadow: none;
   font-weight: 300;
   font-size: 35px;
-  text-align: left;
   margin-left: 15px;
 }
 .title-slide > h3  {
-  color: #4F81BD;
+  color: #94BD13;
   text-shadow: none;
   font-weight: 300;
   font-size: 25px;
@@ -306,7 +305,7 @@ li:not(:last-child) {
 
 ul li::before {
   content: "\25FC";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #4F81BD; /* Change the color */
+  color: #94BD13; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */ 
   width: 1em; /* Also needed for space (tweak if needed) */

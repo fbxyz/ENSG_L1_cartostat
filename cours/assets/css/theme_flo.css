@@ -68,7 +68,7 @@ a, a > code {
     max-width: 100%;
   }
   blockquote {
-    border-left: solid 5px #4F81BD;
+    border-left: solid 5px #94BD13;
     padding-left: 1em;
   }
   .remark-slide table {
@@ -103,7 +103,7 @@ a, a > code {
 }
 
 div.my-footer-title {
-    border-top: 6px solid #dcbd66;
+    border-top: 6px solid #94BD13;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -113,7 +113,7 @@ div.my-footer-title {
 
 
 div.my-footer {
-    background-color: #01326E;
+    background-color: #747C7C;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -123,10 +123,10 @@ div.my-footer {
 
 div.my-footer span {
     font-size: 10pt;
-    color: white;
+    color: #D9DADB;
     position: absolute;
-    left: 165px;
-    bottom: 2px;
+    left: 35px;
+    bottom: -1px;
 }
 
 .center-img {

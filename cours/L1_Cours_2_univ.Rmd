@@ -100,7 +100,6 @@ L’analyse univariée se fait à l’aide de la combinaison **graphiques** et *
 class: inverse, center, middle, animated, fadeIn  
 # 1- Analyse univariée : les graphiques
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -503,7 +502,6 @@ Un graphique est simple à comprendre, mais son interprétation peut-être **sub
 class: inverse, center, middle, animated, fadeIn  
 # 2- Analyse univariée : les valeurs centrales
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -525,7 +523,6 @@ Les principaux outils de l’analyse univariée peuvent être classés en 2 fami
 class: inverse, center, middle, animated, fadeIn  
 # 2.1 - Les valeurs centrales
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -744,7 +741,6 @@ ggplot(df.prof_melt, aes(x = value, fill = variable, color = variable)) +
 class: inverse, center, middle, animated, fadeIn  
 # 2.2 - Les paramètres de dispersion
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
@@ -757,7 +753,6 @@ La mesure de cette **variabilité** est au coeur de nombreuses analyses statisti
 - mesure de la variabilité
 - distinguer un effet aléatoire d'une *vrai* variabilité
 
---
 
 Il existe deux type de paramètres de dispersion :
 - dispersion absolue : même unité que le caractère étudié.
@@ -1025,7 +1020,6 @@ Le plus utilisé est le coefficient de variation (CV). Il peut être exprimé en
 class: inverse, center, middle, animated, fadeIn  
 # 2.3 - Autres outils de l'analyse univariée
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 
@@ -1172,9 +1166,7 @@ knitr::include_graphics("https://i.imgur.com/UyMuG4i.png")
 class: animated, fadeIn
 ## Vérifier la normalité avec des tests
 
-Il existe également des tests statistiques pour déterminer si une série suit une loi particulière. On utilise généralement un test de Shapiro-Wilk 
-
-Un test de normalité calculable à la main est celui de Jarque-Bera, de Il se base sur le coefficient d'asymétrie et le kurtosis.
+Il existe également des tests statistiques pour déterminer si une série suit une loi particulière. On utilise généralement un test de Shapiro-Wilk. Un test de normalité calculable à la main est celui de Jarque-Bera. Il se base sur le coefficient d'asymétrie et le kurtosis.
 
 .pull-left[.center-img[
 $JB=\frac{n-k}{6}(S^{2}+{\frac {(K-3)^{2}}{4}})$
@@ -1187,7 +1179,7 @@ $JB=\frac{n-k}{6}(S^{2}+{\frac {(K-3)^{2}}{4}})$
 - $K$ = Kurtosis de l'échantillon testé. On y retranche 3 qui correspond au kurtosis non normalisé d’une loi normale.
 ]
 
-La statistique JB se teste via une loi du $\chi^2$ à deux degrés de liberté. On pose généralement H0 les données suivent une loi normale et H1 les données ne suivent pas une loi normale. Si les données suivent une loi normale, le résultat du test s'approche alors de 0 et on ne rejette pas Ho au seuil $\alpha$. 
+La statistique JB se teste via une loi du $\chi^2$ à deux degrés de liberté. On pose H0 les données suivent une loi normale et H1 les données ne suivent pas une loi normale. Si les données suivent une loi normale, le résultat du test s'approche alors de 0 et on ne rejette pas Ho au seuil $\alpha$. 
 
 <div class="my-footer"><span>Université Paris 1 Panthéon Sorbonne - L3 `r annee` : analyse de données - Florian Bayer</span></div>
 
@@ -1196,7 +1188,6 @@ La statistique JB se teste via une loi du $\chi^2$ à deux degrés de liberté. 
 class: inverse, center, middle, animated, fadeIn  
 # Conclusions
 
-<img src="https://i.imgur.com/GOFwPGQ.png" STYLE="position:absolute; BOTTOM:30px; RIGHT:0px; WIDTH:150%;"/>
 <div class="my-footer-title "></div> 
 
 ---
