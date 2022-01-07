@@ -4,3 +4,4 @@ statsmodels
 scipy
 matplotlib
 seaborn
+altair
