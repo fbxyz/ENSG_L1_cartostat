@@ -6,7 +6,7 @@ class EnvVar:
     }
 
     metro = {
-        "WIDTH": 728,
+        "WIDTH": 530,
         "HEIGHT": 530,
         "PROJ": "conicConformal",
         "SCALE": 2800,

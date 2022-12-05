@@ -2,7 +2,6 @@ import altair as alt
 from .data import gdf_dic
 from .env import EnvVar
 
-
 def basemap_altair(alt_base, field, countries, type, scale, center, rotate=None):
     if rotate is None:
         rotate = [0, 0, 0]
@@ -107,7 +106,7 @@ def drom_maps(_base_fr, _exclude, _basemap):
     )
 
 
-def map_altair(fr, ind, ind_class, ind_colors, ue, geo, title, legend_title):
+def map_altair(fr, ind, ind_class, ind_colors, ue, geo, title, legend_title,choro=True):
     if geo == "REG":
         exclude = {
             "metro": ["01", "02", "03", "04", "06", "988", "987"],
@@ -157,25 +156,49 @@ def map_altair(fr, ind, ind_class, ind_colors, ue, geo, title, legend_title):
     dom = sort[ind_class].unique()
     col = list(fr[ind_colors].unique())
 
-
-    base_fr = (
-        alt.Chart(fr, title=title)
-        .mark_geoshape(
-            stroke="#4d4d4d",
-            strokeWidth=0.35,
+    if choro : 
+        base_fr = (
+            alt.Chart(fr, title=title)
+            .mark_geoshape(
+                stroke="#4d4d4d",
+                strokeWidth=0.35,
+            )
+            .encode(
+                color=alt.Color(
+                    f"{ind_class}:O",
+                    scale=alt.Scale(domain=dom, range=col),
+                    legend=alt.Legend(title=f"{legend_title}"),
+                ),
+                tooltip=[
+                    alt.Tooltip("LIB_GEO:N", title="Libellé"),
+                    alt.Tooltip(f"{ind}:O", title=legend_title),
+                ],
+            )
         )
-        .encode(
-            color=alt.Color(
-                f"{ind_class}:O",
-                scale=alt.Scale(domain=dom, range=col),
-                legend=alt.Legend(title=f"{legend_title}"),
-            ),
-            tooltip=[
-                alt.Tooltip("LIB_GEO:N", title="Libellé"),
-                alt.Tooltip(f"{ind}:O", title=legend_title),
-            ],
+    
+    else :  
+        fr['x']= fr.centroid.x
+        fr['y']= fr.centroid.y
+        base_fr = (
+            alt.Chart(fr, title=title).mark_circle().encode(
+                longitude='x:Q',
+                latitude='y:Q',
+                size=alt.Size(f'{ind}:Q', title=legend_title),
+                color=alt.value('steelblue'),
+                tooltip=[
+                    alt.Tooltip("LIB_GEO:N", title="Libellé"),
+                    alt.Tooltip(f"{ind}:O", title=legend_title),
+                ],
+            )
         )
-    )
+        
+        fond_fr = alt.Chart(fr, title=title).mark_geoshape(
+                stroke="#4d4d4d",
+                strokeWidth=0.35,
+                fill="#f4f3ee",
+            )
+        base_fr = fond_fr + base_fr 
+    
 
     metro = (
         base_fr.encode()
