@@ -1,8 +1,7 @@
 
 class EnvVar:
     path = {
-        "GEODBPATH": "../data/geo.sqlite",
-        "XLSPATH": "../data/TCRD_048.xlsx",
+        "GEODBPATH": "./data/geo.sqlite",
     }
 
     metro = {

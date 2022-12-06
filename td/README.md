@@ -1,2 +1,53 @@
-# Pour lancer le TD n°1 :
-https://mybinder.org/v2/gh/fbxyz/ENSG_L1_cartostat/HEAD
+# Le TD 1 s'appuie sur Jupyter Lab/Notebook. Pour y accéder, vous pouvez utiliser : 
+
+
+-le (lien)[https://mybinder.org/v2/gh/fbxyz/ENSG_L1_cartostat/HEAD] pour lancer un Notebook Binder. Ce dernier est temporaire et perdu si vous fermez votre navigateur. Pensez à enregistrer votre Notebook ipynb pour le recharger plus tard. Le premier lancement est parfois long et la machine virtuelle s'arrête en cas d'inactivité.
+
+-Installer (Conda)[https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html] sur votre ordinateur (Linux, Windows, MacOS). Cloner ensuite le Git du cours. Les packages à installer sont disponibles dans le fichier requirements.txt (cf. section suivante)
+
+- Vous pouvez aussi utiliser après inscription Google Colaboratory, Kaggle ou CoCalc. Ils peuvent directement importer le contenu du Git du cours.
+
+- Vous pouvez également tester JupyterLab en ligne, mais la session est perdue une fois le navigateur fermé. Il faudra penser à télécharger votre notebook ipynb à chaque fois. Les données seront également à uploader) pour lancer un Notebook Binder. Ce dernier est temporaire et perdu si vous fermez votre navigateur. Pensez à enregistrer votre Notebook ipynb pour le recharger plus tard. Le premier lancement est parfois long et la machine virtuelle s'arrête en cas d'inactivité.
+
+
+# Cloner le repo Git du cours, créer un environnement Conda, installer les packages et lancer Jupyter Lab
+Après avoir installé Git et Conda, lancez un terminal. Placez-vous dans le répertoire qui vous intéresse
+```
+Linux MacOS : cd mon_repertoire/sous_repertoire
+Windows : cd mon_repertoire\sous_repertoire
+```
+
+Clone du repo Git. Le répertoire ENSG_L1_cartostat va être créé à la racine du répertoire où vous vous trouvez
+```
+git clone https://github.com/fbxyz/ENSG_L1_cartostat.git
+
+cd ENSG_L1_cartostat
+```
+
+Création puis activation d'un nouvel environnement Conda "stat"
+```
+conda create -n stat
+conda activate stat
+```
+
+Mise à jour de Conda
+```
+conda update -n base -c defaults conda
+```
+
+Installation des packages python via le fichier requirements.txt 
+``` 
+conda install --yes --file requirements.txt
+```
+
+Jupyter lab n'est pas dans le fichier requirements.txt, pour l'installer : 
+```
+conda install jupyterlab
+```
+
+Lancez Jupyter Lab
+```
+jupyter lab
+```
+
+
