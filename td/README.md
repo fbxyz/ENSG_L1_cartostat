@@ -1,9 +1,9 @@
 # Le TD 1 s'appuie sur Jupyter Lab/Notebook. Pour y accéder, vous pouvez utiliser : 
 
 
--le (lien)[https://mybinder.org/v2/gh/fbxyz/ENSG_L1_cartostat/HEAD] pour lancer un Notebook Binder. Ce dernier est temporaire et perdu si vous fermez votre navigateur. Pensez à enregistrer votre Notebook ipynb pour le recharger plus tard. Le premier lancement est parfois long et la machine virtuelle s'arrête en cas d'inactivité.
+- le (lien)[https://mybinder.org/v2/gh/fbxyz/ENSG_L1_cartostat/HEAD] pour lancer un Notebook Binder. Ce dernier est temporaire et perdu si vous fermez votre navigateur. Pensez à enregistrer votre Notebook ipynb pour le recharger plus tard. Le premier lancement est parfois long et la machine virtuelle s'arrête en cas d'inactivité.
 
--Installer (Conda)[https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html] sur votre ordinateur (Linux, Windows, MacOS). Cloner ensuite le Git du cours. Les packages à installer sont disponibles dans le fichier requirements.txt (cf. section suivante)
+- Installer (Conda)[https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html] sur votre ordinateur (Linux, Windows, MacOS). Cloner ensuite le Git du cours. Les packages à installer sont disponibles dans le fichier requirements.txt (cf. section suivante)
 
 - Vous pouvez aussi utiliser après inscription Google Colaboratory, Kaggle ou CoCalc. Ils peuvent directement importer le contenu du Git du cours.
 
