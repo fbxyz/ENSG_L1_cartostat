@@ -7,8 +7,6 @@
 
 - Vous pouvez aussi utiliser après inscription [Google Colaboratory](https://colab.research.google.com/), [Kaggle](https://www.kaggle.com/) ou [CoCalc](https://cocalc.com/features/jupyter-notebook). Ils peuvent directement importer le contenu du Git du cours.
 
-- Vous pouvez également tester [JupyterLab en ligne](https://jupyter.org/try-jupyter/lab/), mais la session est perdue une fois le navigateur fermé. Il faudra penser à télécharger votre notebook ipynb à chaque fois. Les données seront également à uploader) pour lancer un Notebook Binder. Ce dernier est temporaire et perdu si vous fermez votre navigateur. Pensez à enregistrer votre Notebook ipynb pour le recharger plus tard. Le premier lancement est parfois long et la machine virtuelle s'arrête en cas d'inactivité.
-
 
 # Cloner le repo Git du cours, créer un environnement Conda, installer les packages et lancer Jupyter Lab
 Après avoir installé Git et Conda, lancez un terminal. Placez-vous dans le répertoire qui vous intéresse
