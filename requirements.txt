@@ -2,7 +2,7 @@ numpy
 pandas
 statsmodels
 scipy
-sklearn
+scikit-learn
 matplotlib
 seaborn
 altair
