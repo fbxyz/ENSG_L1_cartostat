@@ -7,8 +7,9 @@
 
 - Vous pouvez aussi utiliser après inscription [Google Colaboratory](https://colab.research.google.com/), [Kaggle](https://www.kaggle.com/) ou [CoCalc](https://cocalc.com/features/jupyter-notebook). Ils peuvent directement importer le contenu du Git du cours.
 
+Si vous installez un environnement conda sur votre ordinateur, je vous conseille d'utiliser Jupyter Lab plutôt que Jupyter Notebook.
 
-# Cloner le repo Git du cours, créer un environnement Conda, installer les packages et lancer Jupyter Lab
+# Comment cloner le repo Git du cours, créer un environnement Conda, installer les packages et lancer Jupyter Lab
 Après avoir installé Git et Conda, lancez un terminal. Placez-vous dans le répertoire qui vous intéresse
 ```
 Linux MacOS : cd mon_repertoire/sous_repertoire
