@@ -36,6 +36,10 @@ conda update -n base -c defaults conda
 
 Installation des packages python via le fichier requirements.txt 
 ``` 
+conda install jupyterlab seaborn altair statsmodels scipy scikit-learn pandas
+
+ou : 
+
 conda install --yes --file requirements.txt
 ```
 
