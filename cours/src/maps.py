@@ -102,7 +102,8 @@ def drom_maps(_base_fr, _exclude, _basemap):
     )
 
     return alt.vconcat(
-        gua, mtq, alt.layer(basemap_guy, guy), reu, may, nca, pol, spacing=10
+        #gua, mtq, alt.layer(basemap_guy, guy), reu, may, nca, pol, spacing=10
+        gua, mtq, guy, reu, may, nca, pol, spacing=10
     )
 
 

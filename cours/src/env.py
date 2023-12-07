@@ -9,7 +9,7 @@ class EnvVar:
         "HEIGHT": 530,
         "PROJ": "conicConformal",
         "SCALE": 2800,
-        "CENTER": [-3.35, 46.2],
+        "CENTER": [-3.35, 51.4], #[-3.35, 46.2],
         "ROTATE": [0, 0, -1.5],
     }
 
