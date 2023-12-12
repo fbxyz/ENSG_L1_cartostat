@@ -23,9 +23,13 @@ git clone https://github.com/fbxyz/ENSG_L1_cartostat.git
 cd ENSG_L1_cartostat
 ```
 
-Création puis activation d'un nouvel environnement Conda "stat"
+Création d'un nouvel environnement Conda "stat"
 ```
 conda create -n stat
+```
+
+Et activaiton de ce nouvel environnement
+```
 conda activate stat
 ```
 
