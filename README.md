@@ -1,5 +1,5 @@
 # ENSG_L1_cartostat
-Cours et TD du cours : Statistiques appliquées en cartographie des L1 ENSG
+Cours et TD du cours : Statistiques appliquées en cartographie des ING1 ENSG
 
 - Le cours est accessible à l'aide de ce <a href="https://rawcdn.githack.com/fbxyz/ENSG_L1_cartostat/8d3b5ea20c9f7def47956b6e398c52dc6b5e38d6/cours/L1_stat.slides.html" target="_blank">lien</a>
 
