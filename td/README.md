@@ -11,7 +11,7 @@ Si vous installez un environnement conda sur votre ordinateur, je vous conseille
 
 
 # Comment cloner le repo Git du cours, créer un environnement Conda, installer les packages et lancer Jupyter Lab
- lancez un terminal. Placez-vous dans le répertoire qui vous intéresse
+ lancez un terminal en cherchant "CMD" dans le menu démarer. Placez-vous dans le répertoire qui vous intéresse
 ```
 Linux MacOS : cd mon_repertoire/sous_repertoire
 Windows : cd mon_repertoire\sous_repertoire
@@ -23,6 +23,11 @@ git clone https://github.com/fbxyz/ENSG_L1_cartostat.git
 
 cd ENSG_L1_cartostat
 ```
+
+Si GIT n'est pas installé, télécharger le contenu de https://github.com/fbxyz/ENSG_L1_cartostat via : 
+
+- le bouton : <> CODE
+- Download ZIP
 
 ## Installation et utilisation de Conda et JupyterLab
 
